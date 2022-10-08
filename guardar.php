@@ -8,8 +8,7 @@ if(isset($_POST['save'])){
     $fecha=$_POST['fecha'];
     $papa=$_POST['papa'];
 
-    $query="INSERT INTO estudiante(id,nombre,fechaNacimiento,PAPA)
-    VALUES($iden,'$nom','$fecha',$papa)";
+    $query="INSERT INTO estudiante(id,nombre,fechaNacimiento,PAPA) VALUES($iden,'$nom','$fecha',$papa)";
     $result=mysqli_query($conn,$query);
     if(!$result){
         $_SESSION['mensaje']="No se pudo guardar";
